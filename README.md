@@ -2,16 +2,16 @@
 
 <br>this template provides routing, authentication, access control and redirection implemented.
 
-<br><br>stack
+<br>stack
 <br>mongodb, express, angular2, node, bootstrap
 
-<br><br>npm
+<br>npm
 <br>backend: bcrypt-nodejs, body-parser, cors, express, jsonwebtoken, mongoose, nodemon
 <br>frontend: angular2-flash-messages, angular2-jwt, core-js, rxjs, zone
 
-<br><br>other library
+<br>other library
 <br>headroom.js, pace.js
-
+<br>
 ## to install
 - open terminal
 - go to application root
