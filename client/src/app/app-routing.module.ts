@@ -1,7 +1,13 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { HomeComponent } from './components/home/home.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component'
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
+import { AboutComponent } from './components/about/about.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuard } from './guards/auth.guard';
+import { NotAuthGuard } from './guards/notAuth.guard';
 
 const appRoutes: Routes = [
   {
@@ -10,7 +16,27 @@ const appRoutes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'register',
+    component: RegisterComponent,
+    canActivate: [NotAuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [NotAuthGuard]
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   },
   { path: '**', component: HomeComponent }
 ];
